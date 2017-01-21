@@ -78,7 +78,10 @@ public class PlayerController : MonoBehaviour {
 			if (stunnedTime <= 0) {
 				model.RecoverFromStun ();
 				stunned = false;
+			} else {
+				return;
 			}
+
 		}
 
 		if (Input.GetButton (horizontalAxis)) {
@@ -96,8 +99,9 @@ public class PlayerController : MonoBehaviour {
 				model.Charging (wavePower, chargedTime / waveChargeTime);
 
 				if (wavePower >= gameController.waveMaxPower) {
+					StopCharging ();
+
 					Fire ();
-					model.Charging (0, 0);
 				}
 			}
 
@@ -108,8 +112,7 @@ public class PlayerController : MonoBehaviour {
 				model.PlayFailedFire ();
 			}
 
-			chargedTime = 0.0f;
-			model.Charging (0, 0);
+			StopCharging ();
 
 			fired = false;
 		} else {
@@ -126,6 +129,12 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
+	void StopCharging()
+	{
+		chargedTime = 0.0f;
+		model.Charging (0, 0);
+	}
+
 	public void Stun (int power)
 	{
 		// stop charging...
@@ -133,6 +142,8 @@ public class PlayerController : MonoBehaviour {
 		model.Stun ();
 
 		stunned = true;
-		stunnedTime = gameController.data.stunTimes [power];
+		stunnedTime = gameController.data.stunTimes [power - 1];
+
+		StopCharging ();
 	}
 }
