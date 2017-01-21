@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour {
 
 	int currentLane = 1;
 
+	public Collider2D hit;
+
 	void Start()
 	{
 		model.Charging (0, 0);
@@ -76,8 +78,7 @@ public class PlayerController : MonoBehaviour {
 			stunnedTime -= Time.deltaTime;
 
 			if (stunnedTime <= 0) {
-				model.RecoverFromStun ();
-				stunned = false;
+				RemoveStun ();
 			} else {
 				return;
 			}
@@ -135,6 +136,14 @@ public class PlayerController : MonoBehaviour {
 		model.Charging (0, 0);
 	}
 
+	void RemoveStun ()
+	{
+		model.RecoverFromStun ();
+		stunned = false;
+
+		hit.enabled = true;
+	}
+
 	public void Stun (int power)
 	{
 		// stop charging...
@@ -143,6 +152,8 @@ public class PlayerController : MonoBehaviour {
 
 		stunned = true;
 		stunnedTime = gameController.data.stunTimes [power - 1];
+
+		hit.enabled = false;
 
 		StopCharging ();
 	}

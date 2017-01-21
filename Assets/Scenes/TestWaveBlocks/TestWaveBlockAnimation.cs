@@ -7,28 +7,6 @@ public class TestWaveBlockAnimation : MonoBehaviour {
 
 	bool animating;
 
-//	// Update is called once per frame
-//	void Update () {
-//
-//		if (animating)
-//			return;
-//
-//		KeyCode[] powerKeys = new KeyCode[] {
-//			KeyCode.Alpha1,
-//			KeyCode.Alpha2,
-//			KeyCode.Alpha3,
-//			KeyCode.Alpha4,
-//			KeyCode.Alpha5
-//		};
-//
-//		for (int i = 0; i < powerKeys.Length; i++) {
-//			if (Input.GetKeyUp (powerKeys [i])) {
-//				StartCoroutine (PlayAnimation (i + 1));
-//			}
-//		}
-//
-//	}
-
 	float upTime;
 	float downTime;
 
