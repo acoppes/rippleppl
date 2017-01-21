@@ -18,4 +18,9 @@ public class Health
 		if (current < 0)
 			current = 0.0f;
 	}
+
+	public bool IsDead()
+	{
+		return current <= 0.001f;
+	}
 }
