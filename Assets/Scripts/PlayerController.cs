@@ -65,8 +65,21 @@ public class PlayerController : MonoBehaviour {
 		MoveToLane (gameController.GetLaneDown (currentLane));
 	}
 
+	bool stunned = false;
+	float stunnedTime;
+
 	// Update is called once per frame
 	void Update () {
+
+		if (stunned) {
+		
+			stunnedTime -= Time.deltaTime;
+
+			if (stunnedTime <= 0) {
+				model.RecoverFromStun ();
+				stunned = false;
+			}
+		}
 
 		if (Input.GetButton (horizontalAxis)) {
 
@@ -111,5 +124,15 @@ public class PlayerController : MonoBehaviour {
 		
 		}
 
+	}
+
+	public void Stun (int power)
+	{
+		// stop charging...
+
+		model.Stun ();
+
+		stunned = true;
+		stunnedTime = gameController.data.stunTimes [power];
 	}
 }

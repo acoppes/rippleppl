@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerModel : MonoBehaviour {
 
@@ -26,6 +27,28 @@ public class PlayerModel : MonoBehaviour {
 	public void PlayFailedFire()
 	{
 
+	}
+
+	public float rotation = 10.0f;
+
+	bool stunned = false;
+
+	public void Stun()
+	{
+		stunned = true;
+	}
+
+	public void RecoverFromStun()
+	{
+		stunned = false;
+		transform.localEulerAngles = new Vector3 (0, 0, 0);
+	}
+
+	void Update()
+	{
+		if (stunned) {
+			transform.localEulerAngles = transform.localEulerAngles + new Vector3 (0, 0, rotation * Time.deltaTime);
+		} 
 	}
 
 }
