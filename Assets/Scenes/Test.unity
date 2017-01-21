@@ -595,6 +595,11 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 946869926}
+    - target: {fileID: 114902118028669176, guid: 596088f422e37a64c9ca5c8a676cfad9,
+        type: 2}
+      propertyPath: gameLogic
+      value: 
+      objectReference: {fileID: 690072696}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 596088f422e37a64c9ca5c8a676cfad9, type: 2}
   m_IsPrefabParent: 0
@@ -721,6 +726,11 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1305741074}
+    - target: {fileID: 114902118028669176, guid: 596088f422e37a64c9ca5c8a676cfad9,
+        type: 2}
+      propertyPath: gameLogic
+      value: 
+      objectReference: {fileID: 690072696}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 596088f422e37a64c9ca5c8a676cfad9, type: 2}
   m_IsPrefabParent: 0

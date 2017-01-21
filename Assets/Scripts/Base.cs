@@ -4,7 +4,15 @@ public class Base : MonoBehaviour {
 
 	public HealthBarModel healthBar;
 
-	public Health health;
+	Health health = new Health();
+
+	public GameController gameLogic;
+
+	void Awake()
+	{
+		health.total = gameLogic.data.playerHealth;
+		health.current = health.total;
+	}
 
 	public void ReceiveDamage(int wavePower)
 	{

@@ -9,7 +9,9 @@ public class GameLogicData : ScriptableObject {
 	[FormerlySerializedAs("waveSpeedTimes")]
 	public float[] waveSpeeds;
 
-	// public float playerHealth = 20.0f;
+	public float playerHealth = 20.0f;
+
+	// multiplicador general para todas las velocidades de waves
 
 	// time stun
 	// health
