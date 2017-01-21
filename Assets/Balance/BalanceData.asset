@@ -23,4 +23,10 @@ MonoBehaviour:
   - 0.075
   - 0.05
   - 0.025
+  stunTimes:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   playerHealth: 15
