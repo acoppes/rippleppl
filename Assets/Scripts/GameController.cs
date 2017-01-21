@@ -8,8 +8,12 @@ public class GameController : MonoBehaviour
 
 	public GameLogicData data;
 
+	public GameUI gameUi;
+
 	int[] playerLayers = new int[2];
 	int[] waveLayers = new int[2];
+
+	public Player[] players;
 
 	void Awake()
 	{
@@ -47,6 +51,17 @@ public class GameController : MonoBehaviour
 		if (wavePower >= waveMaxPower)
 			wavePower = waveMaxPower - 1;
 		return data.waveChargeTimes[wavePower];
+	}
+
+	public void OnBaseDeath(Base playerBase)
+	{
+		// player win
+
+		// make other player base invulnerable
+
+		// delay + win animations
+
+		gameUi.ShowPlayerWin (players[playerBase.player]);
 	}
 
 }

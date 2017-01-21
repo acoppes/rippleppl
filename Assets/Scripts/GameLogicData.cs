@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName="Ripple/Create Balance")]
 public class GameLogicData : ScriptableObject {
 
 	public float[] waveChargeTimes;
 
-	[FormerlySerializedAs("waveSpeedTimes")]
 	public float[] waveSpeeds;
 
+	public float[] stunTimes;
+
 	public float playerHealth = 20.0f;
+
+	public float stunRecoveryTime = 1.0f;
 
 	// multiplicador general para todas las velocidades de waves
 

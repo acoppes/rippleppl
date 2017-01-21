@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
 
 	int currentLane = 1;
 
+	public Collider2D hit;
+
 	void Start()
 	{
 		model.Charging (0, 0);
@@ -62,8 +64,27 @@ public class PlayerController : MonoBehaviour {
 		MoveToLane (gameController.GetLaneDown (currentLane));
 	}
 
+	bool stunned = false;
+	float stunnedTime;
+
+	float lastStunTime = 0;
+
 	// Update is called once per frame
 	void Update () {
+
+		lastStunTime -= Time.deltaTime;
+
+		if (stunned) {
+		
+			stunnedTime -= Time.deltaTime;
+
+			if (stunnedTime <= 0) {
+				RemoveStun ();
+			} else {
+				return;
+			}
+
+		}
 
 		if (input.Charging()) {
 
@@ -80,8 +101,9 @@ public class PlayerController : MonoBehaviour {
 				model.Charging (wavePower, chargedTime / waveChargeTime);
 
 				if (wavePower >= gameController.waveMaxPower) {
+					StopCharging ();
+
 					Fire ();
-					model.Charging (0, 0);
 				}
 			}
 
@@ -92,8 +114,7 @@ public class PlayerController : MonoBehaviour {
 				model.PlayFailedFire ();
 			}
 
-			chargedTime = 0.0f;
-			model.Charging (0, 0);
+			StopCharging ();
 
 			fired = false;
 		} else {
@@ -107,5 +128,40 @@ public class PlayerController : MonoBehaviour {
             }
 		}
 
+	}
+
+	void StopCharging()
+	{
+		chargedTime = 0.0f;
+		model.Charging (0, 0);
+	}
+
+	void RemoveStun ()
+	{
+		model.RecoverFromStun ();
+		stunned = false;
+
+		hit.enabled = true;
+	}
+		
+	public bool CanBeStun()
+	{
+		return lastStunTime <= 0;
+	}
+
+	public void Stun (int power)
+	{
+		// stop charging...
+
+		model.Stun ();
+
+		stunned = true;
+		stunnedTime = gameController.data.stunTimes [power - 1];
+
+		hit.enabled = false;
+
+		StopCharging ();
+
+		lastStunTime = gameController.data.stunRecoveryTime;
 	}
 }

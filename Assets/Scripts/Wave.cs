@@ -106,6 +106,14 @@ public class Wave : MonoBehaviour
 			playerBase.ReceiveDamage (power);
 		}
 
+		var playerCharacter = collider.GetComponent<PlayerController> ();
+
+		if (playerCharacter != null) {
+			if (!playerCharacter.CanBeStun ())
+				return;
+			playerCharacter.Stun (power);
+		}
+
 		Destroy(this.gameObject);
 	}
 }
