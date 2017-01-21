@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 114219882101254372}
   powerText: {fileID: 114952617194259378}
-  rotation: 200
+  rotation: 10
 --- !u!114 &114553366021348890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,9 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 114369199648895706}
   gameController: {fileID: 0}
-  horizontalAxis: Horizontal
-  moveUp: MoveUp1
-  moveDown: MoveDown1
+  input: {fileID: 0}
   wavePrefab: {fileID: 0}
   lookingDirection: {x: 0, y: 0, z: 0}
   hit: {fileID: 58606658121859772}
