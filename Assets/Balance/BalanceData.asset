@@ -30,4 +30,4 @@ MonoBehaviour:
   - 2.5
   - 3
   playerHealth: 15
-  stunRecoveryTime: 1
+  stunRecoveryTime: 0.6
