@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour {
 	bool stunned = false;
 	float stunnedTime;
 
+	bool recoverying = false;
 	float lastStunTime = 0;
 
 	// Update is called once per frame
@@ -128,6 +129,16 @@ public class PlayerController : MonoBehaviour {
             }
 		}
 
+		if (recoverying) {
+		
+			lastStunTime -= Time.deltaTime;
+
+			if (lastStunTime <= 0) {
+				model.SetInRecoveryMode (false);
+				recoverying = false;
+			}
+		
+		}
 	}
 
 	void StopCharging()
@@ -142,6 +153,11 @@ public class PlayerController : MonoBehaviour {
 		stunned = false;
 
 		hit.enabled = true;
+
+		recoverying = true;
+		lastStunTime = gameController.data.stunRecoveryTime;
+
+		model.SetInRecoveryMode (true);
 	}
 		
 	public bool CanBeStun()
@@ -161,7 +177,5 @@ public class PlayerController : MonoBehaviour {
 		hit.enabled = false;
 
 		StopCharging ();
-
-		lastStunTime = gameController.data.stunRecoveryTime;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class PlayerModel : MonoBehaviour {
  
@@ -44,11 +43,23 @@ public class PlayerModel : MonoBehaviour {
 		transform.localEulerAngles = new Vector3 (0, 0, 0);
 	}
 
+	public void SetInRecoveryMode(bool inRecovery)
+	{
+		LeanTween.cancel (this.gameObject);
+
+		if (inRecovery) {
+			LeanTween.alpha (this.gameObject, 0.0f, 0.5f).setLoopPingPong ();
+		} else {
+			LeanTween.alpha (this.gameObject, 1.0f, 0.01f);
+		}
+	}
+
 	void Update()
 	{
 		if (stunned) {
 			transform.localEulerAngles = transform.localEulerAngles + new Vector3 (0, 0, rotation * Time.deltaTime);
 		} 
+
 	}
 
 }
