@@ -70,8 +70,12 @@ public class PlayerController : MonoBehaviour {
 	bool stunned = false;
 	float stunnedTime;
 
+	float lastStunTime = 0;
+
 	// Update is called once per frame
 	void Update () {
+
+		lastStunTime -= Time.deltaTime;
 
 		if (stunned) {
 		
@@ -143,6 +147,11 @@ public class PlayerController : MonoBehaviour {
 
 		hit.enabled = true;
 	}
+		
+	public bool CanBeStun()
+	{
+		return lastStunTime <= 0;
+	}
 
 	public void Stun (int power)
 	{
@@ -156,5 +165,7 @@ public class PlayerController : MonoBehaviour {
 		hit.enabled = false;
 
 		StopCharging ();
+
+		lastStunTime = gameController.data.stunRecoveryTime;
 	}
 }
