@@ -48,7 +48,7 @@ public class PlayerModel : MonoBehaviour {
 		LeanTween.cancel (this.gameObject);
 
 		if (inRecovery) {
-			LeanTween.alpha (this.gameObject, 0.0f, 0.5f).setLoopPingPong ();
+			LeanTween.alpha (this.gameObject, 0.0f, 0.35f).setLoopPingPong ();
 		} else {
 			LeanTween.alpha (this.gameObject, 1.0f, 0.01f);
 		}

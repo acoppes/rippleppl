@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 114219882101254372}
   powerText: {fileID: 114952617194259378}
-  rotation: 10
+  rotation: 360
 --- !u!114 &114553366021348890
 MonoBehaviour:
   m_ObjectHideFlags: 1
