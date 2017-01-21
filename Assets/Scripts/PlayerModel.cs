@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 public class PlayerModel : MonoBehaviour {
-
+ 
 	public Image progressBar;
 
 	public Text powerText;

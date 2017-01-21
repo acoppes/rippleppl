@@ -6,10 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public GameController gameController;
 
-	public string horizontalAxis = "Horizontal";
-
-	public string moveUp = "MoveUp1";
-	public string moveDown = "MoveDown1";
+    public PlayerInput input;
 
 	int wavePower;
 
@@ -68,7 +65,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButton (horizontalAxis)) {
+		if (input.Charging()) {
 
 			if (!fired) {
 				chargedTime += Time.deltaTime;
@@ -88,7 +85,7 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 
-		} else if (Input.GetButtonUp (horizontalAxis)) {
+		} else if (input.Release()) {
 			if (wavePower > 0) {
 				Fire ();
 			} else if (!fired) {
@@ -100,15 +97,14 @@ public class PlayerController : MonoBehaviour {
 
 			fired = false;
 		} else {
-		
-			// not firing
 
-			if (Input.GetButtonDown(moveUp)) {
-				MoveLaneUp ();
-			} else if (Input.GetButtonDown(moveDown)) {
-				MoveLaneDown ();
-			}
-		
+            // not firing
+
+            if (input.MoveDown()) {
+			    MoveLaneUp ();
+		    } else if (input.MoveUp()) {
+			    MoveLaneDown (); 
+            }
 		}
 
 	}
