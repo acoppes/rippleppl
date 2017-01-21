@@ -6,16 +6,10 @@ public class GameController : MonoBehaviour
 
 	public GameObject[] lanes;
 
+	public GameLogicData data;
+
 	int[] playerLayers = new int[2];
 	int[] waveLayers = new int[2];
-
-	public float[] waveChargeTimes = new float[] {
-		1.0f,
-		5.1f,
-		1.2f,
-		1.3f,
-		1.4f
-	};
 
 	void Awake()
 	{
@@ -52,7 +46,7 @@ public class GameController : MonoBehaviour
 	{
 		if (wavePower >= waveMaxPower)
 			wavePower = waveMaxPower - 1;
-		return waveChargeTimes[wavePower];
+		return data.waveChargeTimes[wavePower];
 	}
 
 }

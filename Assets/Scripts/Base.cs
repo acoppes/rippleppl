@@ -8,7 +8,7 @@ public class Base : MonoBehaviour {
 
 	public void ReceiveDamage(int wavePower)
 	{
-		health.Damage (wavePower * 10.0f);
+		health.Damage (wavePower);
 		healthBar.SetHealth (health.GetFactor ());
 	}
 }

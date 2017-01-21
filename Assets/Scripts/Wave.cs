@@ -6,14 +6,17 @@ public class Wave : MonoBehaviour
 
 	public int maxPower = 5;
 
-	public float[] speedPerPower = new float[] {
-		1.0f, 2.0f, 3.0f, 4.0f, 5.0f
-	};
-
 	Vector3 direction;
 	int power;
 
 	bool isAlive;
+
+	GameController controller;
+
+	public void Init(GameController controller)
+	{
+		this.controller = controller;
+	}
 
 	void UpdatePower (int updatedPower)
 	{	
@@ -49,7 +52,7 @@ public class Wave : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		transform.position = transform.position + direction * speedPerPower [power - 1];
+		transform.position = transform.position + direction * controller.data.waveSpeeds[power - 1];
 	}
 
 	void OnCollisionEnter2D(Collision2D otherCollider) {
