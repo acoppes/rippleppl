@@ -4,8 +4,12 @@ public class PlayerController : MonoBehaviour {
 
 	public PlayerModel model;
 
+	public GameController gameController;
+
 	public string horizontalAxis = "Horizontal";
-	public string verticalAxis = "Vertical";
+
+	public string moveUp = "MoveUp1";
+	public string moveDown = "MoveDown1";
 
 	public float timeForWaveIncrement = 1.0f;
 
@@ -17,11 +21,12 @@ public class PlayerController : MonoBehaviour {
 
 	public Vector3 lookingDirection;
 
+	int currentLane;
+
 	void Start()
 	{
 		model.Charging (0, 0);
 	}
-
 
 	bool fired = false;
 
@@ -37,12 +42,35 @@ public class PlayerController : MonoBehaviour {
 		fired = true;
 	}
 
+	void MoveLaneUp()
+	{
+		MoveToLane (gameController.GetLaneUp (currentLane));
+	}
+
+	void MoveToLane (int lane)
+	{
+		if (lane == currentLane) {
+			return;
+		}
+		var myposition = transform.position;
+		myposition.y = gameController.GetLaneVerticalPosition (lane);
+		transform.position = myposition;
+		currentLane = lane;
+	}
+
+	void MoveLaneDown()
+	{
+		MoveToLane (gameController.GetLaneDown (currentLane));
+	}
+
 	// Update is called once per frame
 	void Update () {
-
-		float dy = Input.GetAxis (verticalAxis);
-
-		transform.position = transform.position + new Vector3 (0, 1 * dy, 0);
+		
+		if (Input.GetButtonDown(moveUp)) {
+			MoveLaneUp ();
+		} else if (Input.GetButtonDown(moveDown)) {
+			MoveLaneDown ();
+		}
 
 		if (Input.GetButton (horizontalAxis)) {
 
@@ -56,7 +84,7 @@ public class PlayerController : MonoBehaviour {
 
 				model.Charging (wavePower, chargedTime / timeForWaveIncrement);
 
-				if (wavePower >= 5) {
+				if (wavePower >= gameController.waveMaxPower) {
 					Fire ();
 				}
 			}
