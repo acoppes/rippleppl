@@ -15,6 +15,9 @@ public class Wave : MonoBehaviour
 
 	public void Fire(Vector3 position, Vector3 direction, int power)
 	{
+		if (power > maxPower)
+			power = maxPower;
+		
 		model.SetPower (power);
 
 		transform.position = position;
@@ -26,6 +29,6 @@ public class Wave : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		transform.position = transform.position + direction * speedPerPower [power];
+		transform.position = transform.position + direction * speedPerPower [power - 1];
 	}
 }

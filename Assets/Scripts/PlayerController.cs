@@ -17,6 +17,26 @@ public class PlayerController : MonoBehaviour {
 
 	public Vector3 lookingDirection;
 
+	void Start()
+	{
+		model.Charging (0, 0);
+	}
+
+
+	bool fired = false;
+
+	void Fire()
+	{
+		// disparo con power 0
+		var waveObject = GameObject.Instantiate (wavePrefab);
+		Wave wave = waveObject.GetComponent<Wave> ();
+		wave.Fire (transform.position, lookingDirection, wavePower);
+		wavePower = 0;
+		model.PlayFire ();
+
+		fired = true;
+	}
+
 	// Update is called once per frame
 	void Update () {
 
@@ -25,26 +45,33 @@ public class PlayerController : MonoBehaviour {
 		transform.position = transform.position + new Vector3 (0, 1 * dy, 0);
 
 		if (Input.GetButton (horizontalAxis)) {
-			chargedTime += Time.deltaTime;
 
-			while (chargedTime > timeForWaveIncrement) {
-				wavePower++;
-				chargedTime -= timeForWaveIncrement;
+			if (!fired) {
+				chargedTime += Time.deltaTime;
+
+				while (chargedTime > timeForWaveIncrement) {
+					wavePower++;
+					chargedTime -= timeForWaveIncrement;
+				}
+
+				model.Charging (wavePower, chargedTime / timeForWaveIncrement);
+
+				if (wavePower >= 5) {
+					Fire ();
+				}
 			}
+
 		} else if (Input.GetButtonUp(horizontalAxis)) {
 			if (wavePower > 0) {
-				// disparo con power 0
-				var waveObject = GameObject.Instantiate (wavePrefab);
-				Wave wave = waveObject.GetComponent<Wave> ();
-
-				wave.Fire (transform.position, lookingDirection, wavePower);
-
-				wavePower = 0;
-
-				model.PlayFire ();
-			} else {
+				Fire ();
+			} else if (!fired) {
 				model.PlayFailedFire ();
 			}
+
+			chargedTime = 0.0f;
+			model.Charging (0, 0);
+
+			fired = false;
 		}
 
 	}
