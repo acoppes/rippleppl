@@ -34,7 +34,8 @@ public class PlayerController : MonoBehaviour {
 	{
 		// disparo con power 0
 		var waveObject = GameObject.Instantiate (wavePrefab);
-		waveObject.layer = this.gameObject.layer;
+
+		waveObject.layer = gameController.GetWaveLayer (gameObject.layer);
 
 		Wave wave = waveObject.GetComponent<Wave> ();
 		wave.Fire (transform.position, lookingDirection, wavePower);
