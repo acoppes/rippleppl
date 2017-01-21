@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
 
 	public Player[] players;
 
+
+
 	void Awake()
 	{
 		playerLayers[0] = LayerMask.NameToLayer ("Player1");
