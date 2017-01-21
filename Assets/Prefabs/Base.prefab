@@ -108,6 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fdcc7b85f922c148b67db839a94aee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  health:
+    total: 100
+    current: 100
 --- !u!212 &212343794096407400
 SpriteRenderer:
   m_ObjectHideFlags: 1

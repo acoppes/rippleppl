@@ -96,6 +96,13 @@ public class Wave : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D collider) {
 		// si es player stun
 		// si es base hitpoints
+
+		var playerBase = collider.GetComponent<Base> ();
+
+		if (playerBase != null) {
+			playerBase.ReceiveDamage (power);
+		}
+
 		Destroy(this.gameObject);
 	}
 }
