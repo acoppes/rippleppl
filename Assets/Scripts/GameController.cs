@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
 	int[] playerLayers = new int[2];
 	int[] waveLayers = new int[2];
 
+	public float timeForWaveIncrement = 1.0f;
+
 	void Awake()
 	{
 		playerLayers[0] = LayerMask.NameToLayer ("Player1");
@@ -38,6 +40,11 @@ public class GameController : MonoBehaviour
 		if (playerLayer == playerLayers [0])
 			return waveLayers [0];
 		return waveLayers [1];
+	}
+
+	public float GetChargeTime(int wavePower)
+	{
+		return this.timeForWaveIncrement;
 	}
 
 }

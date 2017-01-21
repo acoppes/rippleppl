@@ -11,8 +11,6 @@ public class PlayerController : MonoBehaviour {
 	public string moveUp = "MoveUp1";
 	public string moveDown = "MoveDown1";
 
-	public float timeForWaveIncrement = 1.0f;
-
 	int wavePower;
 
 	float chargedTime;
@@ -74,12 +72,14 @@ public class PlayerController : MonoBehaviour {
 			if (!fired) {
 				chargedTime += Time.deltaTime;
 
-				while (chargedTime > timeForWaveIncrement) {
+				while (chargedTime > gameController.GetChargeTime (wavePower)) {
+					chargedTime -= gameController.GetChargeTime (wavePower);
 					wavePower++;
-					chargedTime -= timeForWaveIncrement;
 				}
 
-				model.Charging (wavePower, chargedTime / timeForWaveIncrement);
+				float waveChargeTime = gameController.GetChargeTime (wavePower);
+
+				model.Charging (wavePower, chargedTime / waveChargeTime);
 
 				if (wavePower >= gameController.waveMaxPower) {
 					Fire ();
