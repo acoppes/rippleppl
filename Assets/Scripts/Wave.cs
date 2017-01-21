@@ -13,6 +13,20 @@ public class Wave : MonoBehaviour
 	Vector3 direction;
 	int power;
 
+	bool isAlive;
+
+	void UpdatePower (int updatedPower)
+	{	
+		power = updatedPower;
+		model.SetPower (power);
+	}
+
+	void DestroyWave()
+	{
+		isAlive = false;
+		Destroy (this.gameObject);
+	}
+
 	public void Fire(Vector3 position, Vector3 direction, int power)
 	{
 		if (power > maxPower)
@@ -25,6 +39,8 @@ public class Wave : MonoBehaviour
 		this.power = power;
 		this.direction = direction;
 		// start movement
+
+		isAlive = true;
 	}
 
 	void FixedUpdate()
@@ -32,7 +48,46 @@ public class Wave : MonoBehaviour
 		transform.position = transform.position + direction * speedPerPower [power - 1];
 	}
 
+	void OnCollisionEnter2D(Collision2D otherCollider) {
+		if (!isAlive)
+			return;
+		
+		if (this == null || this.gameObject == null || otherCollider == null || otherCollider.gameObject == null)
+			return;
+		
+		var otherWave = otherCollider.gameObject.GetComponent<Wave> ();
+
+		if (otherWave == null)
+			return;
+
+		if (!otherWave.isAlive)
+			return;
+
+		// si es mia se suman
+
+		// si es del otro, se restan
+
+		if (otherCollider.gameObject.layer == this.gameObject.layer) {
+			// es mi player
+		} else {
+			// es el otro player
+
+			if (power < otherWave.power) {
+				otherWave.UpdatePower (otherWave.power - power);
+				DestroyWave ();
+			} else if (power > otherWave.power) {
+				UpdatePower (power - otherWave.power);
+				otherWave.DestroyWave ();
+			} else {
+				DestroyWave ();
+				otherWave.DestroyWave ();
+			}
+		}
+	}
+
 	void OnTriggerEnter2D(Collider2D collider) {
+		// si es player stun
+		// si es base hitpoints
 		Destroy(this.gameObject);
 	}
 }

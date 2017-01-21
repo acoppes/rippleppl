@@ -100,7 +100,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!60 &60891024127365548
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -196,11 +196,11 @@ MonoBehaviour:
   model: {fileID: 114497640492135972}
   maxPower: 5
   speedPerPower:
-  - 0.1
-  - 0.2
   - 0.3
-  - 0.4
-  - 0.5
+  - 0.25
+  - 0.2
+  - 0.15
+  - 0.1
 --- !u!114 &114961156073483314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,7 +291,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1009260913
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &224035481380685458
