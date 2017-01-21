@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 
 	public Vector3 lookingDirection;
 
-	int currentLane;
+	int currentLane = 1;
 
 	void Start()
 	{
