@@ -197,10 +197,10 @@ MonoBehaviour:
   maxPower: 5
   speedPerPower:
   - 0.3
-  - 0.25
-  - 0.2
   - 0.15
-  - 0.1
+  - 0.075
+  - 0.05
+  - 0.025
 --- !u!114 &114961156073483314
 MonoBehaviour:
   m_ObjectHideFlags: 1

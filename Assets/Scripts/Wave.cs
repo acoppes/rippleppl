@@ -18,6 +18,10 @@ public class Wave : MonoBehaviour
 	void UpdatePower (int updatedPower)
 	{	
 		power = updatedPower;
+
+		if (power > maxPower)
+			power = maxPower;
+		
 		model.SetPower (power);
 	}
 
@@ -69,6 +73,10 @@ public class Wave : MonoBehaviour
 
 		if (otherCollider.gameObject.layer == this.gameObject.layer) {
 			// es mi player
+
+			UpdatePower (power + otherWave.power);
+			otherWave.DestroyWave ();
+
 		} else {
 			// es el otro player
 
