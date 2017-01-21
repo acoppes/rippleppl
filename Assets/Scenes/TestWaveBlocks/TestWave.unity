@@ -5135,7 +5135,7 @@ MonoBehaviour:
     upTime: 0.06
     downTime: 0.7
     blockHeight: 0.5
-  speed: 1
+  speed: 0
 --- !u!4 &1069620585
 Transform:
   m_ObjectHideFlags: 0

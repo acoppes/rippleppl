@@ -15,11 +15,10 @@ public class TestWaveBlockAnimation : MonoBehaviour {
 //	bool animating;
 
 	float upTime;
-	float downTime;
+
+	float[] downTimes;
 
 	float blockHeight;
-
-//	public float maxHeight = 2.5f;
 
 	float totalHeight;
 
@@ -30,20 +29,15 @@ public class TestWaveBlockAnimation : MonoBehaviour {
 		PlayAnimation (power, config.upTime, config.downTime, config.blockHeight);
 	}
 
-	public void PlayAnimation(int power, float upTime, float downTime, float blockHeight)
+	public void PlayAnimation(int power, float upTime, float[] downTimes, float blockHeight)
 	{
-//		if (animating)
-//			return;
-
 		this.upTime = upTime;
-		this.downTime = downTime;
+		this.downTimes = downTimes;
 		this.blockHeight = blockHeight;
 
 		totalHeight = power * blockHeight;
 
 		StartUp ();
-
-//		StartCoroutine(PlayAnimationRoutine(power));
 	}
 
 	void StartUp()
@@ -66,33 +60,6 @@ public class TestWaveBlockAnimation : MonoBehaviour {
 		t.localPosition = t.localPosition + new Vector3 (0, y, 0);
 	}
 
-//	IEnumerator PlayAnimationRoutine(int power)
-//	{
-//		animating = true;
-//
-//		float totalHeight = power * blockHeight;
-//
-//		float heightSpeed = totalHeight / upTime;
-//
-//		while (model.localPosition.y < totalHeight) {
-//			yield return null;
-//			IncrementPositionY (model, heightSpeed * Time.deltaTime);
-//		}
-//
-//		model.localPosition = new Vector3 (model.localPosition.x, totalHeight, model.localPosition.z);
-//
-//		heightSpeed = totalHeight / downTime;
-//
-//		while (model.localPosition.y > 0) {
-//			yield return null;
-//			IncrementPositionY (model, -heightSpeed * Time.deltaTime);
-//		}
-//
-//		model.localPosition = new Vector3 (model.localPosition.x, 0.0f, model.localPosition.z);
-//
-//		animating = false;
-//	}
-
 	void Update()
 	{
 		if (state == State.Idle) {
@@ -109,6 +76,8 @@ public class TestWaveBlockAnimation : MonoBehaviour {
 			}
 			
 		} else if (state == State.Down) {
+
+			var downTime = Mathf.Lerp (downTimes [1], downTimes [0], model.localPosition.y / (5 * blockHeight));
 
 			float heightSpeed = totalHeight / downTime;
 

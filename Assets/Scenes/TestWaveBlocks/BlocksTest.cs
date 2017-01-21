@@ -7,7 +7,7 @@ public class BlocksTest : MonoBehaviour {
 	public float timeBetweenBlocks;
 
 	public float upTime;
-	public float downTime;
+	public float[] downTimes;
 
 	public float blockHeight;
 
@@ -24,7 +24,7 @@ public class BlocksTest : MonoBehaviour {
 	IEnumerator BlocksAnimations(int power)
 	{
 		for (int i = 0; i < blocks.Length; i++) {
-			blocks [i].PlayAnimation (power, upTime, downTime, blockHeight);
+			blocks [i].PlayAnimation (power, upTime, downTimes, blockHeight);
 			yield return new WaitForSeconds (timeBetweenBlocks);
 		}
 
