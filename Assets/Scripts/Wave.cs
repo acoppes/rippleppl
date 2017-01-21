@@ -52,7 +52,7 @@ public class Wave : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		transform.position = transform.position + direction * controller.data.waveSpeeds[power - 1];
+		transform.position = transform.position + direction * controller.data.waveSpeeds[power - 1] * Time.deltaTime;
 	}
 
 	void OnCollisionEnter2D(Collision2D otherCollider) {
