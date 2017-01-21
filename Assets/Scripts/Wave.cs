@@ -32,8 +32,7 @@ public class Wave : MonoBehaviour
 		transform.position = transform.position + direction * speedPerPower [power - 1];
 	}
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        Destroy(this);
-    }
+	void OnTriggerEnter2D(Collider2D collider) {
+		Destroy(this.gameObject);
+	}
 }
