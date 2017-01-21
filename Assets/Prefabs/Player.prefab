@@ -219,6 +219,7 @@ MonoBehaviour:
   moveDown: MoveDown1
   wavePrefab: {fileID: 0}
   lookingDirection: {x: 0, y: 0, z: 0}
+  hit: {fileID: 58606658121859772}
 --- !u!114 &114853073555182420
 MonoBehaviour:
   m_ObjectHideFlags: 1
