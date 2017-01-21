@@ -570,17 +570,17 @@ Prefab:
     - target: {fileID: 212343794096407400, guid: 596088f422e37a64c9ca5c8a676cfad9,
         type: 2}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 212343794096407400, guid: 596088f422e37a64c9ca5c8a676cfad9,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.78727156
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 212343794096407400, guid: 596088f422e37a64c9ca5c8a676cfad9,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.99264705
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1642427591106776, guid: 596088f422e37a64c9ca5c8a676cfad9, type: 2}
       propertyPath: m_Layer
@@ -695,17 +695,17 @@ Prefab:
     - target: {fileID: 212343794096407400, guid: 596088f422e37a64c9ca5c8a676cfad9,
         type: 2}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 212343794096407400, guid: 596088f422e37a64c9ca5c8a676cfad9,
         type: 2}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 212343794096407400, guid: 596088f422e37a64c9ca5c8a676cfad9,
         type: 2}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1642427591106776, guid: 596088f422e37a64c9ca5c8a676cfad9, type: 2}
       propertyPath: m_Layer
@@ -976,7 +976,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4802945974754644, guid: 9bb81ceefc240ee48a58a4d7e8aa5736, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -8.3
       objectReference: {fileID: 0}
     - target: {fileID: 4802945974754644, guid: 9bb81ceefc240ee48a58a4d7e8aa5736, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1141,7 +1141,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4802945974754644, guid: 9bb81ceefc240ee48a58a4d7e8aa5736, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 4802945974754644, guid: 9bb81ceefc240ee48a58a4d7e8aa5736, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1303,7 +1303,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.2602124, b: 0.6691177, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

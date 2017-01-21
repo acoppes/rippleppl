@@ -68,12 +68,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
-		if (Input.GetButtonDown(moveUp)) {
-			MoveLaneUp ();
-		} else if (Input.GetButtonDown(moveDown)) {
-			MoveLaneDown ();
-		}
 
 		if (Input.GetButton (horizontalAxis)) {
 
@@ -92,7 +86,7 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 
-		} else if (Input.GetButtonUp(horizontalAxis)) {
+		} else if (Input.GetButtonUp (horizontalAxis)) {
 			if (wavePower > 0) {
 				Fire ();
 			} else if (!fired) {
@@ -103,6 +97,16 @@ public class PlayerController : MonoBehaviour {
 			model.Charging (0, 0);
 
 			fired = false;
+		} else {
+		
+			// not firing
+
+			if (Input.GetButtonDown(moveUp)) {
+				MoveLaneUp ();
+			} else if (Input.GetButtonDown(moveDown)) {
+				MoveLaneDown ();
+			}
+		
 		}
 
 	}
