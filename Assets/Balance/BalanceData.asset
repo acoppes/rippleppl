@@ -24,10 +24,10 @@ MonoBehaviour:
   - 0.11
   - 0.09
   stunTimes:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  - 3
   playerHealth: 15
   stunRecoveryTime: 1
