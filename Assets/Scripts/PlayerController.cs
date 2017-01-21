@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour {
 
 				if (wavePower >= gameController.waveMaxPower) {
 					Fire ();
+					model.Charging (0, 0);
 				}
 			}
 

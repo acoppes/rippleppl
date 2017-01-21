@@ -643,6 +643,12 @@ MonoBehaviour:
   - {fileID: 955587327}
   - {fileID: 596702872}
   - {fileID: 157660419}
+  waveChargeTimes:
+  - 1
+  - 1.1
+  - 1.2
+  - 1.3
+  - 1.4
 --- !u!114 &772292711 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114369199648895706, guid: 9bb81ceefc240ee48a58a4d7e8aa5736,

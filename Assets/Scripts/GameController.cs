@@ -9,7 +9,13 @@ public class GameController : MonoBehaviour
 	int[] playerLayers = new int[2];
 	int[] waveLayers = new int[2];
 
-	public float timeForWaveIncrement = 1.0f;
+	public float[] waveChargeTimes = new float[] {
+		1.0f,
+		5.1f,
+		1.2f,
+		1.3f,
+		1.4f
+	};
 
 	void Awake()
 	{
@@ -44,7 +50,9 @@ public class GameController : MonoBehaviour
 
 	public float GetChargeTime(int wavePower)
 	{
-		return this.timeForWaveIncrement;
+		if (wavePower >= waveMaxPower)
+			wavePower = waveMaxPower - 1;
+		return waveChargeTimes[wavePower];
 	}
 
 }
