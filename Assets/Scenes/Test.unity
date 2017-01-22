@@ -874,6 +874,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerText: {fileID: 930715353}
   restartButton: {fileID: 741004406}
+  playerColors:
+  - {r: 1, g: 0.23529413, b: 0.7137255, a: 1}
+  - {r: 0.07450981, g: 0.7764706, b: 0.84313726, a: 1}
 --- !u!1 &596702872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,8 +1121,8 @@ MonoBehaviour:
   gameUi: {fileID: 595039801}
   camera: {fileID: 1804865095}
   players:
+  - player: 0
   - player: 1
-  - player: 2
 --- !u!82 &690072697
 AudioSource:
   m_ObjectHideFlags: 0
