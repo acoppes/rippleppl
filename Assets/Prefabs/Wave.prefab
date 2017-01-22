@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114730101658730944}
   - component: {fileID: 114497640492135972}
   - component: {fileID: 50996155650350374}
-  - component: {fileID: 58618751146042736}
+  - component: {fileID: 61856619914365324}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -98,10 +98,10 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 6
---- !u!58 &58618751146042736
-CircleCollider2D:
+--- !u!61 &61856619914365324
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -113,7 +113,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Size: {x: 1.27, y: 0.5}
 --- !u!114 &114233880237009594
 MonoBehaviour:
   m_ObjectHideFlags: 1

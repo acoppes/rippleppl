@@ -72,8 +72,6 @@ public class Wave : MonoBehaviour
 
 		// si es mia se suman
 
-		// si es del otro, se restan
-
 		if (otherCollider.gameObject.layer == this.gameObject.layer) {
 			// es mi player
 
@@ -92,6 +90,8 @@ public class Wave : MonoBehaviour
 			} else {
 				DestroyWave ();
 				otherWave.DestroyWave ();
+
+
 			}
 		}
 	}
@@ -121,5 +121,6 @@ public class Wave : MonoBehaviour
 		if (block != null) {
 			block.PlayAnimation (power, controller.data.blockConfig);
 		}
+
 	}
 }
