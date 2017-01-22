@@ -11,6 +11,9 @@ public class Block : MonoBehaviour {
 
 	public Transform model;
 
+    public AudioSource tileUp;
+ 
+
     float frecuency = 5f;
 
     float amplitud = 0.02f;
@@ -84,6 +87,8 @@ public class Block : MonoBehaviour {
 		currentPlayer = player;
 
 		SetPlayerSprite (power);
+
+        tileUp.Play();
 
 		StartUp ();
 	}
