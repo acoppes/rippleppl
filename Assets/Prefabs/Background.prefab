@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4378990520892732}
   - component: {fileID: 212450860655899122}
+  - component: {fileID: 114472236680400350}
   m_Layer: 0
   m_Name: Background (4)
   m_TagString: Untagged
@@ -99,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4470780083902130}
   - component: {fileID: 212554006138362932}
+  - component: {fileID: 114328784307586770}
   m_Layer: 0
   m_Name: Background (2)
   m_TagString: Untagged
@@ -189,6 +191,34 @@ Transform:
   m_Father: {fileID: 4292393185354380}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114328784307586770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894737661954436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3998ba4b60b905b4e8d18415b64d2c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frecuencyOffset: 0
+  frecuency: 10
+  amplitud: 0.025
+--- !u!114 &114472236680400350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305628201622882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3998ba4b60b905b4e8d18415b64d2c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frecuencyOffset: 5
+  frecuency: 10
+  amplitud: 0.025
 --- !u!212 &212450860655899122
 SpriteRenderer:
   m_ObjectHideFlags: 1
