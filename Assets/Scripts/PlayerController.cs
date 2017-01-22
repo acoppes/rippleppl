@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour {
 	public AudioSource switchLaneSound;
 	public AudioSource hitSound;
 	public AudioSource releaseSound;
+    public AudioSource chargeSound;
+    bool chargeSoundPlaying;
 
 	void Start()
 	{
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Fire()
 	{
+       
 		var position = transform.position;
 		position.y = gameController.GetLaneVerticalPosition (currentLane);
 
@@ -130,8 +133,13 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (input.Charging()) {
-
+            
 			if (!fired) {
+                if (!chargeSoundPlaying)
+                 { 
+                     chargeSound.Play();
+                     chargeSoundPlaying = true;
+                 }
 				chargedTime += Time.deltaTime;
 
 				while (chargedTime > gameController.GetChargeTime (wavePower)) {
@@ -189,7 +197,9 @@ public class PlayerController : MonoBehaviour {
 	{
 		chargedTime = 0.0f;
 		model.Charging (0, 0);
-	}
+        chargeSoundPlaying = false;
+        chargeSound.Stop();
+    }
 
 	void RemoveStun ()
 	{
