@@ -13,9 +13,10 @@ public class ChargeBlockTest : MonoBehaviour {
 		}
 
 		if (Input.GetKeyUp (KeyCode.Alpha2)) {
-			chargeBlock.Fire ();
+			chargeBlock.GoDown ();
 			power = 0;
 		}
+			
 	}
 	
 }

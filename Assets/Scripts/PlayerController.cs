@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour {
 
 	void Fire()
 	{
+		var position = transform.position;
+		position.y = gameController.GetLaneVerticalPosition (currentLane);
+
 		// disparo con power 0
 		var waveObject = GameObject.Instantiate (wavePrefab);
 
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 
 		Wave wave = waveObject.GetComponent<Wave> ();
 		wave.Init (gameController);
-		wave.Fire (transform.position, lookingDirection, wavePower);
+		wave.Fire (position, lookingDirection, wavePower);
 		wavePower = 0;
 		model.PlayFire ();
 

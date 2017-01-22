@@ -5,7 +5,7 @@ public class ChargeBlock : MonoBehaviour {
 	public float totalHeight;
 	public float blockHeight;
 
-	bool isFiring;
+	bool isGoingDown;
 
 	public float downTime = 0.1f;
 
@@ -13,7 +13,7 @@ public class ChargeBlock : MonoBehaviour {
 
 	public void Charge(int charge)
 	{
-		if (isFiring)
+		if (isGoingDown)
 			return;
 
 		if (model.localPosition.y >= totalHeight) {
@@ -32,17 +32,17 @@ public class ChargeBlock : MonoBehaviour {
 	
 	}
 
-	public void Fire()
+	public void GoDown()
 	{
-		if (isFiring)
+		if (isGoingDown)
 			return;
 
-		isFiring = true;
+		isGoingDown = true;
 	}
 
 	public void Update()
 	{
-		if (isFiring) {
+		if (isGoingDown) {
 		
 			// descend logic...
 			float heightSpeed = totalHeight / downTime;
@@ -57,7 +57,7 @@ public class ChargeBlock : MonoBehaviour {
 
 			if (model.localPosition.y < 0) {
 				model.localPosition = new Vector3 (model.localPosition.x, 0.0f, model.localPosition.z);
-				isFiring = false;
+				isGoingDown = false;
 			}
 
 		}
