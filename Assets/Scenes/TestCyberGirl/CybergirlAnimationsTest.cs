@@ -1,27 +1,22 @@
 ﻿using UnityEngine;
 
-//public class CharacterModel : MonoBehaviour
-//{
-//	
-//}
-
 public class CybergirlAnimationsTest : MonoBehaviour {
 
-	public Animator animator;
+	public CharacterModel character;
 
 	public void Update()
 	{
 		if (Input.GetKeyUp (KeyCode.Alpha1)) {
-			animator.Play ("Idle");
+			character.Idle ();
 		}
 		if (Input.GetKeyUp (KeyCode.Alpha2)) {
-			animator.Play ("Stomp");
+			character.Stomp ();
 		}
 		if (Input.GetKeyUp (KeyCode.Alpha3)) {
-			animator.Play ("Stun");
+			character.Stun ();
 		}
 		if (Input.GetKeyUp (KeyCode.Alpha4)) {
-			animator.Play ("Charge");
+			character.Charge ();
 		}
 	}
 

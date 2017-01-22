@@ -71,12 +71,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4543632367417178}
-  - component: {fileID: 212443455204980896}
   - component: {fileID: 114369199648895706}
   m_Layer: 0
-  m_Name: Model
+  m_Name: Player
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -179,7 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 114219882101254372}
   powerText: {fileID: 114952617194259378}
-  rotation: 360
+  characterModelPrefab: {fileID: 1328838502661010, guid: a1debaf32f8bd584b807f471af174ee0,
+    type: 2}
 --- !u!114 &114553366021348890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,6 +218,7 @@ MonoBehaviour:
   wavePrefab: {fileID: 0}
   lookingDirection: {x: 0, y: 0, z: 0}
   hit: {fileID: 58606658121859772}
+  player: 0
 --- !u!114 &114853073555182420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,41 +268,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 5
---- !u!212 &212443455204980896
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680270894068486}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -287811427
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6a9bb9b4b48b154790a13c2dae74d38, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!222 &222682097319365488
 CanvasRenderer:
   m_ObjectHideFlags: 1
