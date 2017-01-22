@@ -9,19 +9,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8306b1f34556b94faee87b4e2d2aeca, type: 3}
-  m_Name: BalanceData Original
+  m_Name: BalanceData 1
   m_EditorClassIdentifier: 
   waveChargeTimes:
-  - 1
-  - 1.8
-  - 1.2
-  - 1.3
-  - 1.4
+  - 0.6
+  - 0.55
+  - 0.5
+  - 0.45
+  - 0.4
   waveSpeeds:
-  - 0.3
-  - 0.15
-  - 0.075
-  - 0.05
-  - 0.025
-  stunTimes: []
+  - 14.4
+  - 12.24
+  - 10.08
+  - 7.92
+  - 6.48
+  stunTimes:
+  - 1
+  - 1.25
+  - 1.5
+  - 1.75
+  - 2
   playerHealth: 15
+  stunRecoveryTime: 0.6
+  blockConfig:
+    upTime: 0.06
+    downTime:
+    - 0.7
+    - 0.2
+    blockHeight: 0.2
