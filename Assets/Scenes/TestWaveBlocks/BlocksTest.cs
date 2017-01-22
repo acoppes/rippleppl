@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BlocksTest : MonoBehaviour {
 
-	public TestWaveBlockAnimation[] blocks;
+	public Block[] blocks;
 	public float timeBetweenBlocks;
 
 	public float upTime;

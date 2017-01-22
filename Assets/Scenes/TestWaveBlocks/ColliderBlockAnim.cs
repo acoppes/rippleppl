@@ -15,7 +15,7 @@ public class ColliderBlockAnim : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D otherCollider) {
 
-		var block = otherCollider.GetComponent<TestWaveBlockAnimation> ();
+		var block = otherCollider.GetComponent<Block> ();
 
 		if (block != null) {
 			block.PlayAnimation (testPower, blockConfig);
