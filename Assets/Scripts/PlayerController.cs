@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
 	ChargeBlock chargeBlock;
 
 	public int player;
+
+	public AudioSource switchLaneSound;
 		
 	void Start()
 	{
@@ -71,6 +73,8 @@ public class PlayerController : MonoBehaviour {
 			return;
 		}
 		MoveToLane (lane);
+
+		switchLaneSound.Play ();
 	}
 
 	void MoveToLane (int lane)
@@ -94,6 +98,8 @@ public class PlayerController : MonoBehaviour {
 			return;
 		}
 		MoveToLane (lane);
+
+		switchLaneSound.Play ();
 	}
 
 	bool stunned = false;

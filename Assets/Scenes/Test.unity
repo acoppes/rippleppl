@@ -2098,9 +2098,19 @@ Prefab:
       propertyPath: input
       value: 
       objectReference: {fileID: 1343699678}
+    - target: {fileID: 114558489142412002, guid: 9bb81ceefc240ee48a58a4d7e8aa5736,
+        type: 2}
+      propertyPath: switchLaneSound
+      value: 
+      objectReference: {fileID: 1611707390}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bb81ceefc240ee48a58a4d7e8aa5736, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &1611707390 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82628173226399964, guid: 9bb81ceefc240ee48a58a4d7e8aa5736,
+    type: 2}
+  m_PrefabInternal: {fileID: 1611707389}
 --- !u!1 &1633710234
 GameObject:
   m_ObjectHideFlags: 0
