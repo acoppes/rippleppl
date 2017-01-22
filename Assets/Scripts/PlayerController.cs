@@ -211,5 +211,8 @@ public class PlayerController : MonoBehaviour {
 		hit.enabled = false;
 
 		StopCharging ();
+
+
+		chargeBlock.GoDown ();
 	}
 }
