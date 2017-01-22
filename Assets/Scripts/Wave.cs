@@ -116,7 +116,7 @@ public class Wave : MonoBehaviour
 			Destroy(this.gameObject);
 		}
 
-		var block = collider.GetComponent<TestWaveBlockAnimation> ();
+		var block = collider.GetComponent<Block> ();
 
 		if (block != null) {
 			block.PlayAnimation (power, controller.data.blockConfig);

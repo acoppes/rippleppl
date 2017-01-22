@@ -20,7 +20,7 @@ public class Base : MonoBehaviour {
 	{
 		if (health.IsDead ())
 			return;
-
+        gameLogic.shakeCamera(0.2f);
 		health.Damage (wavePower);
 		healthBar.SetHealth (health.GetFactor ());
 
