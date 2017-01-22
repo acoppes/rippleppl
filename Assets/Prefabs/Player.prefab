@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 82628173226399964}
   - component: {fileID: 82550599937740160}
   - component: {fileID: 82554905879697868}
+  - component: {fileID: 82602169569529436}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -252,6 +253,87 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 841d73aa5940303428293d860c9bc7b5, type: 3}
   m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82602169569529436
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795948691729022}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243744941077754070, guid: 6a71d7bf2d166c04b929f3e7c04f35d6,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: af226ad3695fe3840a563ab395c66e17, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -498,6 +580,7 @@ MonoBehaviour:
   switchLaneSound: {fileID: 82628173226399964}
   hitSound: {fileID: 82550599937740160}
   releaseSound: {fileID: 82554905879697868}
+  chargeSound: {fileID: 82602169569529436}
 --- !u!114 &114607769869531096
 MonoBehaviour:
   m_ObjectHideFlags: 1
