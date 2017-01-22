@@ -24,7 +24,7 @@ public class BlocksTest : MonoBehaviour {
 	IEnumerator BlocksAnimations(int power)
 	{
 		for (int i = 0; i < blocks.Length; i++) {
-			blocks [i].PlayAnimation (power, upTime, downTimes, blockHeight);
+			blocks [i].PlayAnimation (power, 0, upTime, downTimes, blockHeight);
 			yield return new WaitForSeconds (timeBetweenBlocks);
 		}
 

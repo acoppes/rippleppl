@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 
 		Wave wave = waveObject.GetComponent<Wave> ();
 		wave.Init (gameController);
-		wave.Fire (position, lookingDirection, wavePower);
+		wave.Fire (position, lookingDirection, wavePower, player);
 		wavePower = 0;
 		model.PlayFire ();
 

@@ -18,7 +18,7 @@ public class ColliderBlockAnim : MonoBehaviour {
 		var block = otherCollider.GetComponent<Block> ();
 
 		if (block != null) {
-			block.PlayAnimation (testPower, blockConfig);
+			block.PlayAnimation (testPower, 0,  blockConfig);
 		}
 
 		Debug.Log ("On collision");

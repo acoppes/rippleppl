@@ -13,6 +13,8 @@ public class Wave : MonoBehaviour
 
 	GameController controller;
 
+	int player;
+
 	public void Init(GameController controller)
 	{
 		this.controller = controller;
@@ -34,8 +36,10 @@ public class Wave : MonoBehaviour
 		Destroy (this.gameObject);
 	}
 
-	public void Fire(Vector3 position, Vector3 direction, int power)
+	public void Fire(Vector3 position, Vector3 direction, int power, int player)
 	{
+		this.player = player;
+
 		if (power > maxPower)
 			power = maxPower;
 		
@@ -119,7 +123,7 @@ public class Wave : MonoBehaviour
 		var block = collider.GetComponent<Block> ();
 
 		if (block != null) {
-			block.PlayAnimation (power, controller.data.blockConfig);
+			block.PlayAnimation (power, player, controller.data.blockConfig);
 		}
 
 	}
