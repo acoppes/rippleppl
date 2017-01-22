@@ -109,8 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  totalHeight: 1
   gameLogic: {fileID: 0}
   model: {fileID: 4811033229176722}
+  downAcceleration: 0.2
   player: 0
 --- !u!212 &212343794096407400
 SpriteRenderer:
@@ -143,7 +145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -275295955
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb9160f7498c02f40852fbd004ea14bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e5e613fd6048e7408944beaeaa953f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

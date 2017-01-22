@@ -9,7 +9,7 @@ public class Base : MonoBehaviour {
     }
 
     public HealthBarModel healthBar;
-     float totalHeight = 2f;
+    public float totalHeight = 2f;
 
 	Health health = new Health();
 
@@ -17,6 +17,8 @@ public class Base : MonoBehaviour {
     public Transform model;
 
     float upTime;
+
+	public float downAcceleration = 0.2f;
 
     float shakeTime = 0;
     float shakeTotalTime = 0.5f;
@@ -74,7 +76,7 @@ public class Base : MonoBehaviour {
         else if (state == State.Down)
         {
 
-            heightSpeed += 0.1f * Time.deltaTime;
+			heightSpeed += downAcceleration * Time.deltaTime;
 
             SetHeight(model, -heightSpeed * Time.deltaTime);
 
