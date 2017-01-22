@@ -2329,6 +2329,12 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: cb31ee2dd9ed584418ec1df7c202ecb9,
         type: 3}
+    - target: {fileID: 114369199648895706, guid: 9bb81ceefc240ee48a58a4d7e8aa5736,
+        type: 2}
+      propertyPath: characterModelPrefab
+      value: 
+      objectReference: {fileID: 1328838502661010, guid: 5e04b23f122f88d4fbc3263d93a7fc04,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bb81ceefc240ee48a58a4d7e8aa5736, type: 2}
   m_IsPrefabParent: 0
