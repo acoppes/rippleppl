@@ -32,6 +32,8 @@ public class Base : MonoBehaviour {
 
 	public int player;
 
+	public AudioSource hitSound;
+
 	void Awake()
 	{
 		health.total = gameLogic.data.playerHealth;
@@ -51,6 +53,8 @@ public class Base : MonoBehaviour {
 
 		if (health.IsDead ())
 			gameLogic.OnBaseDeath (this);
+
+		hitSound.Play ();
 
         StartShake();
     }
