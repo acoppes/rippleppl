@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d0e8c1b041e7e9f46989ba7ae84e37f2
+timeCreated: 1485107921
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Zenith (BRK)
+  fontNames:
+  - Zenith (BRK)
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
