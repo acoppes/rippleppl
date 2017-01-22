@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 
 	public AudioSource switchLaneSound;
 	public AudioSource hitSound;
+	public AudioSource releaseSound;
 
 	void Start()
 	{
@@ -63,6 +64,8 @@ public class PlayerController : MonoBehaviour {
 		model.PlayFire ();
 
 		fired = true;
+
+		releaseSound.Play ();
 
 		chargeBlock.GoDown ();
 	}
