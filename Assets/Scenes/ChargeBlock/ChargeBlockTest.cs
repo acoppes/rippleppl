@@ -1,16 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ChargeBlockTest : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	public ChargeBlock chargeBlock;
+
+	public int power;
+
+	public void Update() {
+		if (Input.GetKeyUp (KeyCode.Alpha1)) {
+			power++;
+			chargeBlock.Charge(power);
+		}
+
+		if (Input.GetKeyUp (KeyCode.Alpha2)) {
+			chargeBlock.Fire ();
+			power = 0;
+		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
