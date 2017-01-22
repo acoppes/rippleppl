@@ -13,6 +13,8 @@ public class GameLogicData : ScriptableObject {
 
 	public float stunRecoveryTime = 1.0f;
 
+	public BlockConfig blockConfig;
+
 	// multiplicador general para todas las velocidades de waves
 
 	// time stun

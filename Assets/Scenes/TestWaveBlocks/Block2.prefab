@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4750473392741716}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4007161152247764}
   - component: {fileID: 114791287567423018}
   - component: {fileID: 61519197867435108}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Block2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4890621483047480}
   - component: {fileID: 212596804733878444}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

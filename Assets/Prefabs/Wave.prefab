@@ -37,11 +37,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4044976479363488}
-  - component: {fileID: 212821425235073844}
   - component: {fileID: 114730101658730944}
   - component: {fileID: 114497640492135972}
-  - component: {fileID: 60891024127365548}
   - component: {fileID: 50996155650350374}
+  - component: {fileID: 58618751146042736}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -101,8 +100,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!60 &60891024127365548
-PolygonCollider2D:
+--- !u!58 &58618751146042736
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -113,12 +112,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 0.5, y: -0.000000029802322}
-      - {x: 0, y: 0.5}
-      - {x: -0.5, y: 0}
-      - {x: -0.000000029802322, y: -0.5}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!114 &114233880237009594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,19 +190,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 114497640492135972}
   maxPower: 5
-  speedPerPower:
-  - 0.3
-  - 0.15
-  - 0.075
-  - 0.05
-  - 0.025
 --- !u!114 &114961156073483314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1920989231884500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -234,41 +223,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 5
---- !u!212 &212821425235073844
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660692710202612}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -287811427
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b454f65278b3de642b6390446ecbfb1c, type: 3}
-  m_Color: {r: 0, g: 0.672, b: 0.17147575, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!222 &222960627644811286
 CanvasRenderer:
   m_ObjectHideFlags: 1

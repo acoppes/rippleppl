@@ -31,3 +31,9 @@ MonoBehaviour:
   - 2
   playerHealth: 15
   stunRecoveryTime: 0.6
+  blockConfig:
+    upTime: 0.06
+    downTime:
+    - 0.7
+    - 0.2
+    blockHeight: 0.2

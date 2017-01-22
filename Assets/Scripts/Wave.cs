@@ -104,6 +104,7 @@ public class Wave : MonoBehaviour
 
 		if (playerBase != null) {
 			playerBase.ReceiveDamage (power);
+			Destroy(this.gameObject);
 		}
 
 		var playerCharacter = collider.GetComponent<PlayerController> ();
@@ -112,8 +113,13 @@ public class Wave : MonoBehaviour
 			if (!playerCharacter.CanBeStun ())
 				return;
 			playerCharacter.Stun (power);
+			Destroy(this.gameObject);
 		}
 
-		Destroy(this.gameObject);
+		var block = collider.GetComponent<TestWaveBlockAnimation> ();
+
+		if (block != null) {
+			block.PlayAnimation (power, controller.data.blockConfig);
+		}
 	}
 }
