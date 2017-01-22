@@ -18,6 +18,8 @@ public class BlocksGenerator : MonoBehaviour {
 		for (int j = 0; j < cols; j++) {
 			for (int i = 0; i < rows; i++) {
 				var block = GameObject.Instantiate (blockPrefab);
+                var code = block.GetComponent<TestWaveBlockAnimation>();
+                code.frecuencyOffset = j+i;
 				block.transform.SetParent (this.transform);
 				block.transform.position = position + new Vector3 (j * separations.x, i * separations.y, i);
 			}

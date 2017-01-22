@@ -12,15 +12,25 @@ public class TestWaveBlockAnimation : MonoBehaviour {
 
 	public Transform model;
 
+    float frecuency = 5f;
+
+    float amplitud = 0.02f;
+
+    public float frecuencyOffset=0;
+
 //	bool animating;
 
 	float upTime;
+
+    float frecuencyTime=0;
 
 	float[] downTimes;
 
 	float blockHeight;
 
 	float totalHeight;
+
+    
 
 	State state = State.Idle;
 
@@ -62,9 +72,10 @@ public class TestWaveBlockAnimation : MonoBehaviour {
 
 	void Update()
 	{
-		if (state == State.Idle) {
-
-		} else if (state == State.Up) {
+        frecuencyTime += Time.deltaTime;
+        if (state == State.Idle) {
+            model.localPosition = new Vector3(model.localPosition.x, amplitud*Mathf.Sin(frecuency*frecuencyTime+frecuencyOffset), model.localPosition.z);
+        } else if (state == State.Up) {
 
 			float heightSpeed = totalHeight / upTime;
 			IncrementPositionY (model, heightSpeed * Time.deltaTime);
