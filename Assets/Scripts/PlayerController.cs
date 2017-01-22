@@ -31,9 +31,11 @@ public class PlayerController : MonoBehaviour {
 		model.Charging (0, 0);
 
 		float height = gameController.GetLaneVerticalPosition (currentLane);
-		transform.position = new Vector3 (transform.position.x, height, transform.position.z);
+//		transform.position = new Vector3 (transform.position.x, height, transform.position.z);
 
-		chargeBlock = gameController.GetChargeBlock (player, currentLane);
+//		chargeBlock = gameController.GetChargeBlock (player, currentLane);
+
+		MoveToLane (currentLane);
 	}
 
 	void Fire()
@@ -59,25 +61,34 @@ public class PlayerController : MonoBehaviour {
 
 	void MoveLaneUp()
 	{
-		MoveToLane (gameController.GetLaneUp (currentLane));
+		var lane = gameController.GetLaneUp (currentLane);
+		if (lane == currentLane) {
+			return;
+		}
+		MoveToLane (lane);
 	}
 
 	void MoveToLane (int lane)
 	{
-		if (lane == currentLane) {
-			return;
-		}
 		var myposition = transform.position;
 		myposition.y = gameController.GetLaneVerticalPosition (lane);
 		transform.position = myposition;
+
 		currentLane = lane;
 
 		chargeBlock = gameController.GetChargeBlock (player, currentLane);
+
+		chargeBlock.LocateCharacter (model.transform);
+//		model.transform.SetParent (chargeBlock.transform, false);
 	}
 
 	void MoveLaneDown()
 	{
-		MoveToLane (gameController.GetLaneDown (currentLane));
+		var lane = gameController.GetLaneDown (currentLane);
+		if (lane == currentLane) {
+			return;
+		}
+		MoveToLane (lane);
 	}
 
 	bool stunned = false;

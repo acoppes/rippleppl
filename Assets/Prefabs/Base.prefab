@@ -53,7 +53,7 @@ Transform:
   m_GameObject: {fileID: 1642427591106776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 5.95, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4811033229176722}
   m_Father: {fileID: 0}
@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 1994958462884694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4348834693175560}
   m_RootOrder: 0
@@ -85,7 +85,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 5.95}
 --- !u!114 &114359613606579852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,9 +109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  health:
-    total: 100
-    current: 100
+  totalHeight: 1
+  gameLogic: {fileID: 0}
+  model: {fileID: 4811033229176722}
+  downAcceleration: 0.2
+  player: 0
 --- !u!212 &212343794096407400
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -143,7 +145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -275295955
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb9160f7498c02f40852fbd004ea14bd, type: 3}
-  m_Color: {r: 0.5195472, g: 0.5588235, b: 0.15203288, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6e5e613fd6048e7408944beaeaa953f3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

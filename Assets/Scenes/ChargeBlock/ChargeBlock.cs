@@ -53,13 +53,16 @@ public class ChargeBlock : MonoBehaviour {
 
 			model.localPosition = position;
 
-//			IncrementPositionY (model, -heightSpeed * Time.deltaTime);
-
 			if (model.localPosition.y < 0) {
 				model.localPosition = new Vector3 (model.localPosition.x, 0.0f, model.localPosition.z);
 				isGoingDown = false;
 			}
 
 		}
+	}
+
+	public void LocateCharacter(Transform transform)
+	{
+		transform.SetParent (model.transform, false);
 	}
 }
