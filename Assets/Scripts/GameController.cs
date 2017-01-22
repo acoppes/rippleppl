@@ -70,15 +70,31 @@ public class GameController : MonoBehaviour
 		return data.waveChargeTimes[wavePower];
 	}
 
+	bool playerWin = false;
+
 	public void OnBaseDeath(Base playerBase)
 	{
-		// player win
+		if (playerWin)
+			return;
 
-		// make other player base invulnerable
+		playerWin = true;
 
-		// delay + win animations
+		var inputs = GameObject.FindObjectsOfType<PlayerInput> ();
+		foreach (var i in inputs) {
+			i.enabled = false;
+		}
 
-		gameUi.ShowPlayerWin (players[playerBase.player]);
+		var waves = GameObject.FindObjectsOfType<Wave> ();
+		foreach (var wave in waves) {
+			Destroy (wave);
+		}
+
+		var players = GameObject.FindObjectsOfType<PlayerController> ();
+		foreach (var player in players) {
+			player.enabled = false;
+		}
+
+		gameUi.ShowPlayerWin (this.players[playerBase.player]);
 	}
 
     public void shakeCamera(float time, float maxX = .1f, float maxY = .1f, float shakeInterval = 0.05f)
