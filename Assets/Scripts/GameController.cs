@@ -4,7 +4,7 @@ public class GameController : MonoBehaviour
 {
 	public int waveMaxPower = 5;
 
-	public GameObject[] lanes;
+	public Lane[] lanes;
 
 	public GameLogicData data;
 
@@ -30,17 +30,25 @@ public class GameController : MonoBehaviour
 	{
 		// locate players in middle lane
 
+	}
 
+	public ChargeBlock GetChargeBlock(int player, int lane)
+	{
+		return lanes [lane].GetChargeBlock(player);
 	}
 
 	public int GetLaneUp(int lane)
 	{
 		return Mathf.Clamp (lane - 1, 0, lanes.Length - 1);
+//		int otherLane = Mathf.Clamp (lane - 1, 0, lanes.Length - 1);
+//		return lanes [otherLane];
 	}
 
 	public int GetLaneDown(int lane)
 	{
 		return Mathf.Clamp (lane + 1, 0, lanes.Length - 1);
+//		int otherLane = Mathf.Clamp (lane + 1, 0, lanes.Length - 1);
+//		return lanes [otherLane];
 	}
 
 	public float GetLaneVerticalPosition(int lane)
