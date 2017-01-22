@@ -46,13 +46,13 @@ public class Block : MonoBehaviour {
 		playerBlockSprite.color = color;
 	}
 
-	void SetPlayerSprite()
+	void SetPlayerSprite(int power)
 	{
 //		playerBlockSprite.enabled = true;
 		playerBlockSprite.sprite = playerSprite [currentPlayer];
 
 		LeanTween.cancel (playerBlockSprite.gameObject);
-		LeanTween.alpha (playerBlockSprite.gameObject, 0.0f, timeToIdleColor).setFrom (new Vector3 (1.0f, 1.0f, 1.0f)).setEase (LeanTweenType.easeOutQuad);
+		LeanTween.alpha (playerBlockSprite.gameObject, 0.0f, timeToIdleColor * power).setFrom (new Vector3 (1.0f, 1.0f, 1.0f)).setEase (LeanTweenType.easeOutQuad);
 	}
 
 //	void UnsetPlayerSprite()
@@ -83,7 +83,7 @@ public class Block : MonoBehaviour {
 
 		currentPlayer = player;
 
-		SetPlayerSprite ();
+		SetPlayerSprite (power);
 
 		StartUp ();
 	}
