@@ -18,11 +18,11 @@ MonoBehaviour:
   - 0.45
   - 0.4
   waveSpeeds:
-  - 14.4
-  - 12.24
-  - 10.08
-  - 7.92
-  - 6.48
+  - 10
+  - 5
+  - 4
+  - 3
+  - 2
   stunTimes:
   - 1
   - 1.25
@@ -34,6 +34,6 @@ MonoBehaviour:
   blockConfig:
     upTime: 0.06
     downTime:
-    - 0.7
-    - 0.2
-    blockHeight: 0.2
+    - 4
+    - 0.25
+    blockHeight: 0.3

@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour {
 	public Collider2D hit;
 
 	bool fired = false;
+
+	ChargeBlock chargeBlock;
+
+	public int player;
 		
 	void Start()
 	{
@@ -28,6 +32,8 @@ public class PlayerController : MonoBehaviour {
 
 		float height = gameController.GetLaneVerticalPosition (currentLane);
 		transform.position = new Vector3 (transform.position.x, height, transform.position.z);
+
+		chargeBlock = gameController.GetChargeBlock (player, currentLane);
 	}
 
 	void Fire()
@@ -42,11 +48,13 @@ public class PlayerController : MonoBehaviour {
 
 		Wave wave = waveObject.GetComponent<Wave> ();
 		wave.Init (gameController);
-		wave.Fire (position, lookingDirection, wavePower);
+		wave.Fire (position, lookingDirection, wavePower, player);
 		wavePower = 0;
 		model.PlayFire ();
 
 		fired = true;
+
+		chargeBlock.GoDown ();
 	}
 
 	void MoveLaneUp()
@@ -63,6 +71,8 @@ public class PlayerController : MonoBehaviour {
 		myposition.y = gameController.GetLaneVerticalPosition (lane);
 		transform.position = myposition;
 		currentLane = lane;
+
+		chargeBlock = gameController.GetChargeBlock (player, currentLane);
 	}
 
 	void MoveLaneDown()
@@ -101,6 +111,8 @@ public class PlayerController : MonoBehaviour {
 				while (chargedTime > gameController.GetChargeTime (wavePower)) {
 					chargedTime -= gameController.GetChargeTime (wavePower);
 					wavePower++;
+
+					chargeBlock.Charge (wavePower);
 				}
 
 				float waveChargeTime = gameController.GetChargeTime (wavePower);

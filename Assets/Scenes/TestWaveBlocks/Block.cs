@@ -29,22 +29,61 @@ public class Block : MonoBehaviour {
 
 	float totalHeight;
 
-    
+	public Sprite[] playerSprite; 
+
+	int currentPlayer;
 
 	State state = State.Idle;
 
-	public void PlayAnimation(int power, BlockConfig config)
+	public SpriteRenderer playerBlockSprite;
+
+	public float timeToIdleColor = 1.0f;
+
+	void Awake()
 	{
-		PlayAnimation (power, config.upTime, config.downTime, config.blockHeight);
+		var color = playerBlockSprite.color;
+		color.a = 0.0f;
+		playerBlockSprite.color = color;
 	}
 
-	public void PlayAnimation(int power, float upTime, float[] downTimes, float blockHeight)
+	void SetPlayerSprite(int power)
+	{
+//		playerBlockSprite.enabled = true;
+		playerBlockSprite.sprite = playerSprite [currentPlayer];
+
+		LeanTween.cancel (playerBlockSprite.gameObject);
+		LeanTween.alpha (playerBlockSprite.gameObject, 0.0f, timeToIdleColor * power).setFrom (new Vector3 (1.0f, 1.0f, 1.0f)).setEase (LeanTweenType.easeOutQuad);
+	}
+
+//	void UnsetPlayerSprite()
+//	{
+//		playerBlockSprite.enabled = false;
+//	}
+
+//	void UpdatePlayerSprite()
+//	{
+//		var color = playerBlockSprite.color;
+//		var totalHeight = 5 * blockHeight;
+//		color.a = Mathf.Lerp (0.2f, 1.0f, model.localPosition.y / totalHeight);
+//		playerBlockSprite.color = color;
+//	}
+
+	public void PlayAnimation(int power, int player, BlockConfig config)
+	{
+		PlayAnimation (power, player, config.upTime, config.downTime, config.blockHeight);
+	}
+
+	public void PlayAnimation(int power, int player, float upTime, float[] downTimes, float blockHeight)
 	{
 		this.upTime = upTime;
 		this.downTimes = downTimes;
 		this.blockHeight = blockHeight;
 
 		totalHeight = power * blockHeight;
+
+		currentPlayer = player;
+
+		SetPlayerSprite (power);
 
 		StartUp ();
 	}
@@ -62,6 +101,7 @@ public class Block : MonoBehaviour {
 	void StartIdle()
 	{
 		this.state = State.Idle;
+//		UnsetPlayerSprite ();
 	}
 
 	void IncrementPositionY(Transform t, float y)
@@ -99,5 +139,7 @@ public class Block : MonoBehaviour {
 			}
 				
 		}
+
+//		UpdatePlayerSprite ();
 	}
 }
