@@ -36,6 +36,11 @@ public class PlayerController : MonoBehaviour {
 //		chargeBlock = gameController.GetChargeBlock (player, currentLane);
 
 		MoveToLane (currentLane);
+
+		if (player == 0)
+			model.SetFlip (false);
+		else
+			model.SetFlip (true);
 	}
 
 	void Fire()
