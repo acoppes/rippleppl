@@ -15,8 +15,6 @@ public class GameController : MonoBehaviour
 
 	public Player[] players;
 
-
-
 	void Awake()
 	{
 		playerLayers[0] = LayerMask.NameToLayer ("Player1");
@@ -24,6 +22,13 @@ public class GameController : MonoBehaviour
 
 		waveLayers[0] = LayerMask.NameToLayer ("Wave1");
 		waveLayers[1] = LayerMask.NameToLayer ("Wave2");
+	}
+
+	void Start()
+	{
+		// locate players in middle lane
+
+
 	}
 
 	public int GetLaneUp(int lane)

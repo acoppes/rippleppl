@@ -20,12 +20,15 @@ public class PlayerController : MonoBehaviour {
 
 	public Collider2D hit;
 
+	bool fired = false;
+		
 	void Start()
 	{
 		model.Charging (0, 0);
-	}
 
-	bool fired = false;
+		float height = gameController.GetLaneVerticalPosition (currentLane);
+		transform.position = new Vector3 (transform.position.x, height, transform.position.z);
+	}
 
 	void Fire()
 	{
