@@ -9,7 +9,7 @@ public class Base : MonoBehaviour {
     }
 
     public HealthBarModel healthBar;
-     float totalHeight = 0.5f;
+     float totalHeight = 2f;
 
 	Health health = new Health();
 
@@ -18,14 +18,13 @@ public class Base : MonoBehaviour {
 
     float upTime;
 
-    float frecuencyTime = 0;
-
     float shakeTime = 0;
     float shakeTotalTime = 0.5f;
 
     float heightSpeed=0;
     float localX;
     float lastY;
+    float baseY;
 
     State state = State.Idle;
 
@@ -35,6 +34,7 @@ public class Base : MonoBehaviour {
 	{
 		health.total = gameLogic.data.playerHealth;
 		health.current = health.total;
+        baseY = model.localPosition.y;
         SetHeight(model, healthToHeight());
         localX = model.localPosition.x;
 	}
@@ -78,9 +78,9 @@ public class Base : MonoBehaviour {
 
             SetHeight(model, -heightSpeed * Time.deltaTime);
 
-            if (model.localPosition.y <= healthToHeight())
+            if (model.localPosition.y <= baseY+healthToHeight())
             {
-                model.localPosition=new Vector3(model.localPosition.x, healthToHeight(),0f);
+                model.localPosition=new Vector3(model.localPosition.x, baseY + healthToHeight(), 0f);
                 StartIdle();
             }
 
