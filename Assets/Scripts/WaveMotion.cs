@@ -19,6 +19,6 @@ public class WaveMotion : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         time += Time.deltaTime;
-        transform.position = new Vector3(startX,startY+ amplitud * Mathf.Sin(frecuency * time + frecuencyOffset));
+		transform.position = new Vector3(startX,startY+ amplitud * Mathf.Sin(frecuency * time + frecuencyOffset), transform.position.z);
 	}
 }
