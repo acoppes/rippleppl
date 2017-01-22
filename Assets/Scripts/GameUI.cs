@@ -24,12 +24,14 @@ public class GameUI : MonoBehaviour
 	public void ShowPlayerWin (Player player)
 	{
 //		Time.timeScale = 0.0f;
-		playerText.text = string.Format ("Player {0} Wins!", (player.player + 1));
+		int playerIndex = 1 - player.player;
+
+		playerText.text = string.Format ("Player {0} Wins!", (playerIndex + 1));
 
 		playerText.enabled = true;
 		restartButton.enabled = true;
 
-		playerText.color = playerColors [player.player];
+		playerText.color = playerColors [playerIndex];
 	}
 		
 }

@@ -114,7 +114,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 49655458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1702468277}
@@ -142,7 +142,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_SortingLayerID: 1009260913
+  m_SortingLayerID: -275295955
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &98272526
@@ -875,8 +875,8 @@ MonoBehaviour:
   playerText: {fileID: 930715353}
   restartButton: {fileID: 741004406}
   playerColors:
-  - {r: 1, g: 0.23529413, b: 0.7137255, a: 1}
   - {r: 0.07450981, g: 0.7764706, b: 0.84313726, a: 1}
+  - {r: 1, g: 0.24705884, b: 0.7176471, a: 1}
 --- !u!1 &596702872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,11 +1533,6 @@ Prefab:
       propertyPath: m_Size.y
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114902118028669176, guid: 596088f422e37a64c9ca5c8a676cfad9,
-        type: 2}
-      propertyPath: hitSound
-      value: 
-      objectReference: {fileID: 1265028299}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 596088f422e37a64c9ca5c8a676cfad9, type: 2}
   m_IsPrefabParent: 0
@@ -1766,11 +1761,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4447973508431242, guid: 3a716ae9295c2194bb8fc1aa34b90f22,
     type: 2}
   m_PrefabInternal: {fileID: 1086605262}
---- !u!82 &1265028299 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82282118942789848, guid: 596088f422e37a64c9ca5c8a676cfad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 944933208}
 --- !u!1 &1266380152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,7 +1784,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1266380152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 416797452}
@@ -1822,7 +1812,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_SortingLayerID: 1009260913
+  m_SortingLayerID: -275295955
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1305741072

@@ -203,8 +203,6 @@ public class PlayerController : MonoBehaviour {
 	{
 		// stop charging...
 
-		model.Stun ();
-
 		stunned = true;
 		stunnedTime = gameController.data.stunTimes [power - 1];
 
@@ -212,7 +210,8 @@ public class PlayerController : MonoBehaviour {
 
 		StopCharging ();
 
-
 		chargeBlock.GoDown ();
+
+		model.Stun ();
 	}
 }
