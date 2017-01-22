@@ -1,12 +1,33 @@
 ﻿using UnityEngine;
 
 public class Base : MonoBehaviour {
+    public enum State
+    {
+        Idle,
+        Shake,
+        Down
+    }
 
-	public HealthBarModel healthBar;
+    public HealthBarModel healthBar;
+     float totalHeight = 0.5f;
 
 	Health health = new Health();
 
 	public GameController gameLogic;
+    public Transform model;
+
+    float upTime;
+
+    float frecuencyTime = 0;
+
+    float shakeTime = 0;
+    float shakeTotalTime = 0.5f;
+
+    float heightSpeed=0;
+    float localX;
+    float lastY;
+
+    State state = State.Idle;
 
 	public int player;
 
@@ -14,6 +35,8 @@ public class Base : MonoBehaviour {
 	{
 		health.total = gameLogic.data.playerHealth;
 		health.current = health.total;
+        SetHeight(model, healthToHeight());
+        localX = model.localPosition.x;
 	}
 
 	public void ReceiveDamage(int wavePower)
@@ -26,5 +49,71 @@ public class Base : MonoBehaviour {
 
 		if (health.IsDead ())
 			gameLogic.OnBaseDeath (this);
-	}
+
+        StartShake();
+    }
+    void Update()
+    {
+      
+        if (state == State.Idle)
+        {
+          
+        }
+        else if (state == State.Shake)
+        {
+            shakeTime -= Time.deltaTime;
+            Shake(model);
+            if (shakeTime<0)
+            {
+                heightSpeed = 0;
+                StartDown();
+                model.localPosition = new Vector3(localX, lastY, 0f);
+            }
+
+        }
+        else if (state == State.Down)
+        {
+
+            heightSpeed += 0.1f * Time.deltaTime;
+
+            SetHeight(model, -heightSpeed * Time.deltaTime);
+
+            if (model.localPosition.y <= healthToHeight())
+            {
+                model.localPosition=new Vector3(model.localPosition.x, healthToHeight(),0f);
+                StartIdle();
+            }
+
+        }
+    }
+
+    void StartShake()
+    {
+        lastY = model.localPosition.y;
+        shakeTime = shakeTotalTime;
+        this.state = State.Shake;
+    }
+
+    void StartDown()
+    {
+        this.state = State.Down;
+    }
+
+    void StartIdle()
+    {
+        this.state = State.Idle;
+    }
+
+    void SetHeight(Transform t, float y)
+    {
+        t.localPosition = t.localPosition + new Vector3(0, y, 0);
+    }
+    void Shake(Transform t)
+    {
+        t.localPosition =  new Vector3(localX+Random.Range(-0.5f,0.5f)*Time.deltaTime, lastY+Random.Range(-0.5f, 0.5f)*Time.deltaTime, 0);
+    }
+    float healthToHeight()
+    {
+        return health.current*totalHeight/health.total;
+    }  
 }
