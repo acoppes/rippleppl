@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 4750473392741716}
+  frecuencyOffset: 0
 --- !u!212 &212596804733878444
 SpriteRenderer:
   m_ObjectHideFlags: 1

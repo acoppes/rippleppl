@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class TestWaveBlockAnimation : MonoBehaviour {
+public class Block : MonoBehaviour {
 
 	public enum State
 	{
