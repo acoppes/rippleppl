@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
 
 	public GameUI gameUi;
 
+    public CameraModel camera;
+
 	int[] playerLayers = new int[2];
 	int[] waveLayers = new int[2];
 
@@ -70,5 +72,10 @@ public class GameController : MonoBehaviour
 
 		gameUi.ShowPlayerWin (players[playerBase.player]);
 	}
+
+    public void shakeCamera(float time, float maxX = .1f, float maxY = .1f, float shakeInterval = 0.05f)
+    {
+        camera.shake(time, maxX, maxY, shakeInterval);
+    }
 
 }
