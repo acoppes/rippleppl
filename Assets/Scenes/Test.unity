@@ -309,52 +309,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 262799656}
---- !u!1001 &332422686
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044976479363488, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1660692710202612, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9cd4363549253734f8010e72c7670b6e, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &405425255
 Prefab:
   m_ObjectHideFlags: 0
@@ -2427,7 +2381,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022785551
 GameObject:
@@ -2439,7 +2393,7 @@ GameObject:
   - component: {fileID: 2022785553}
   - component: {fileID: 2022785552}
   m_Layer: 0
-  m_Name: Ripplep3
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
