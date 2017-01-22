@@ -23,4 +23,14 @@ public class CharacterModel : MonoBehaviour
 	{
 		animator.Play ("Charge");
 	}
+
+	public void Victory()
+	{
+		animator.Play ("Victory");
+	}
+
+	public void Defeat()
+	{
+		animator.Play ("Defeat");
+	}
 }

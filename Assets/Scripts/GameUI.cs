@@ -10,6 +10,13 @@ public class GameUI : MonoBehaviour
 
 	public Color[] playerColors;
 
+	bool showingVictory = false;
+
+	void Restart()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+
 	void Awake()
 	{
 		playerText.enabled = false;
@@ -17,7 +24,7 @@ public class GameUI : MonoBehaviour
 
 		restartButton.onClick.AddListener (delegate() {
 //			Time.timeScale = 1.0f;
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			Restart();
 		});
 	}
 
@@ -32,6 +39,19 @@ public class GameUI : MonoBehaviour
 		restartButton.enabled = true;
 
 		playerText.color = playerColors [playerIndex];
+
+		showingVictory = true;
+	}
+
+	public void Update()
+	{
+		if (!showingVictory)
+			return;
+		
+		if (Input.GetKeyUp (KeyCode.Return)) {
+			Restart ();
+		}
+
 	}
 		
 }

@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
 
 	public Player[] players;
 
+	public PlayerController[] playerControllers;
+
 	void Awake()
 	{
 		playerLayers[0] = LayerMask.NameToLayer ("Player1");
@@ -95,6 +97,14 @@ public class GameController : MonoBehaviour
 		}
 
 		gameUi.ShowPlayerWin (this.players[playerBase.player]);
+
+		foreach (var playerController in playerControllers) {
+			if (playerController.player == playerBase.player) {
+				playerController.model.GetModel ().Defeat ();
+			} else {
+				playerController.model.GetModel ().Victory ();
+			}
+		}
 	}
 
     public void shakeCamera(float time, float maxX = .1f, float maxY = .1f, float shakeInterval = 0.05f)

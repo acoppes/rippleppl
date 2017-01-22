@@ -8,6 +8,11 @@ public class PlayerModel : MonoBehaviour {
 
 	public ChargeModel charge;
 
+	public CharacterModel GetModel()
+	{
+		return character;
+	}
+
 	void Awake()
 	{
 		var characterModelObject = GameObject.Instantiate (characterModelPrefab);
