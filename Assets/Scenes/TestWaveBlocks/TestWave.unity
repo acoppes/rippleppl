@@ -134,6 +134,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1248597577}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &11900300
 Transform:
   m_ObjectHideFlags: 0
@@ -191,6 +196,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 863068501}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &14931538
 Transform:
   m_ObjectHideFlags: 0
@@ -391,6 +401,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 653257429}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &35333884
 Transform:
   m_ObjectHideFlags: 0
@@ -1182,6 +1197,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1176386775}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &137241551
 Transform:
   m_ObjectHideFlags: 0
@@ -1412,6 +1432,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1934987026}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &197087259
 Transform:
   m_ObjectHideFlags: 0
@@ -1710,6 +1735,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 92800680}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &257627954
 Transform:
   m_ObjectHideFlags: 0
@@ -2172,7 +2202,7 @@ MonoBehaviour:
   - {fileID: 1368078813}
   timeBetweenBlocks: 0.1
   upTime: 0.06
-  downTime: 0.7
+  downTimes: []
   blockHeight: 0.5
 --- !u!4 &344917470
 Transform:
@@ -2230,6 +2260,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 2075534057}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &350594958
 Transform:
   m_ObjectHideFlags: 0
@@ -2381,6 +2416,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1135527113}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &389091668
 Transform:
   m_ObjectHideFlags: 0
@@ -2566,6 +2606,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1442074701}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &459038791
 Transform:
   m_ObjectHideFlags: 0
@@ -3157,6 +3202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1869494504}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &631150396
 Transform:
   m_ObjectHideFlags: 0
@@ -3500,6 +3550,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 870431401}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &656408682
 Transform:
   m_ObjectHideFlags: 0
@@ -3775,6 +3830,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1630933533}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &760366329
 Transform:
   m_ObjectHideFlags: 0
@@ -3832,6 +3892,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1188253071}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &783929981
 Transform:
   m_ObjectHideFlags: 0
@@ -4043,6 +4108,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 18249204}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &870162200
 Transform:
   m_ObjectHideFlags: 0
@@ -4190,6 +4260,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1042673177}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &905228036
 Transform:
   m_ObjectHideFlags: 0
@@ -4247,6 +4322,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 503759312}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &907539766
 Transform:
   m_ObjectHideFlags: 0
@@ -4304,6 +4384,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 841838807}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &908472088
 Transform:
   m_ObjectHideFlags: 0
@@ -4391,6 +4476,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 2122633694}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &947826016
 Transform:
   m_ObjectHideFlags: 0
@@ -4448,6 +4538,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1908527471}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &957445805
 Transform:
   m_ObjectHideFlags: 0
@@ -4490,6 +4585,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 600051287}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &960671282
 Transform:
   m_ObjectHideFlags: 0
@@ -4897,6 +4997,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1538217284}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1050172783
 Transform:
   m_ObjectHideFlags: 0
@@ -4939,6 +5044,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1748899537}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1056215631
 Transform:
   m_ObjectHideFlags: 0
@@ -4996,6 +5106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 871997266}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1062688669
 Transform:
   m_ObjectHideFlags: 0
@@ -5053,6 +5168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1831948256}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1064472400
 Transform:
   m_ObjectHideFlags: 0
@@ -5133,7 +5253,9 @@ MonoBehaviour:
   testPower: 5
   blockConfig:
     upTime: 0.06
-    downTime: 0.7
+    downTime:
+    - 1
+    - 0.1
     blockHeight: 0.5
   speed: 0
 --- !u!4 &1069620585
@@ -5192,6 +5314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 560054217}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1074930330
 Transform:
   m_ObjectHideFlags: 0
@@ -5249,6 +5376,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 688357377}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1093841668
 Transform:
   m_ObjectHideFlags: 0
@@ -5336,6 +5468,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1273642343}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1112935405
 Transform:
   m_ObjectHideFlags: 0
@@ -5487,6 +5624,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1877263952}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1124373821
 Transform:
   m_ObjectHideFlags: 0
@@ -5574,6 +5716,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 2046148337}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1138183645
 Transform:
   m_ObjectHideFlags: 0
@@ -6105,6 +6252,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 943204858}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1265202665
 Transform:
   m_ObjectHideFlags: 0
@@ -6497,6 +6649,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 831468549}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1368078814
 Transform:
   m_ObjectHideFlags: 0
@@ -6603,6 +6760,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1661070233}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1379759027
 Transform:
   m_ObjectHideFlags: 0
@@ -6788,6 +6950,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1981706532}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1398722946
 Transform:
   m_ObjectHideFlags: 0
@@ -6845,6 +7012,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 657949245}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1408144313
 Transform:
   m_ObjectHideFlags: 0
@@ -7297,6 +7469,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1622043464}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1511566516
 Transform:
   m_ObjectHideFlags: 0
@@ -7576,6 +7753,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1479308634}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1544224376
 Transform:
   m_ObjectHideFlags: 0
@@ -7761,6 +7943,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 189305457}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1584162806
 Transform:
   m_ObjectHideFlags: 0
@@ -7818,6 +8005,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 530702011}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1585221435
 Transform:
   m_ObjectHideFlags: 0
@@ -7939,6 +8131,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 664495045}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1611109152
 Transform:
   m_ObjectHideFlags: 0
@@ -8534,6 +8731,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 885697500}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1710381420
 Transform:
   m_ObjectHideFlags: 0
@@ -8591,6 +8793,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 336864931}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1717160788
 Transform:
   m_ObjectHideFlags: 0
@@ -8791,6 +8998,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1110490332}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1795009603
 Transform:
   m_ObjectHideFlags: 0
@@ -9409,6 +9621,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 178324005}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1890990060
 Transform:
   m_ObjectHideFlags: 0
@@ -9639,6 +9856,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1115678561}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &1925351266
 Transform:
   m_ObjectHideFlags: 0
@@ -10106,6 +10328,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1510968163}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &2069402452
 Transform:
   m_ObjectHideFlags: 0
@@ -10178,6 +10405,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 508197702}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &2098734087
 Transform:
   m_ObjectHideFlags: 0
@@ -10299,6 +10531,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1912518007}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &2105119901
 Transform:
   m_ObjectHideFlags: 0
@@ -10499,6 +10736,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 358346409}
+  tileUp: {fileID: 0}
+  frecuencyOffset: 0
+  playerSprite: []
+  playerBlockSprite: {fileID: 0}
+  timeToIdleColor: 1
 --- !u!4 &2135697118
 Transform:
   m_ObjectHideFlags: 0

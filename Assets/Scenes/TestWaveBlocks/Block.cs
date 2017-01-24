@@ -13,7 +13,6 @@ public class Block : MonoBehaviour {
 
     public AudioSource tileUp;
  
-
     float frecuency = 5f;
 
     float amplitud = 0.02f;
@@ -44,32 +43,24 @@ public class Block : MonoBehaviour {
 
 	void Awake()
 	{
-		var color = playerBlockSprite.color;
-		color.a = 0.0f;
-		playerBlockSprite.color = color;
+		if (playerBlockSprite != null) {
+			var color = playerBlockSprite.color;
+			color.a = 0.0f;
+			playerBlockSprite.color = color;
+		}
 	}
 
 	void SetPlayerSprite(int power)
 	{
 //		playerBlockSprite.enabled = true;
+		if (playerSprite == null || playerSprite.Length == 0)
+			return;
+
 		playerBlockSprite.sprite = playerSprite [currentPlayer];
 
 		LeanTween.cancel (playerBlockSprite.gameObject);
 		LeanTween.alpha (playerBlockSprite.gameObject, 0.0f, timeToIdleColor * power).setFrom (new Vector3 (1.0f, 1.0f, 1.0f)).setEase (LeanTweenType.easeOutQuad);
 	}
-
-//	void UnsetPlayerSprite()
-//	{
-//		playerBlockSprite.enabled = false;
-//	}
-
-//	void UpdatePlayerSprite()
-//	{
-//		var color = playerBlockSprite.color;
-//		var totalHeight = 5 * blockHeight;
-//		color.a = Mathf.Lerp (0.2f, 1.0f, model.localPosition.y / totalHeight);
-//		playerBlockSprite.color = color;
-//	}
 
 	public void PlayAnimation(int power, int player, BlockConfig config)
 	{
@@ -88,7 +79,8 @@ public class Block : MonoBehaviour {
 
 		SetPlayerSprite (power);
 
-        tileUp.Play();
+		if (tileUp != null)
+        	tileUp.Play();
 
 		StartUp ();
 	}
